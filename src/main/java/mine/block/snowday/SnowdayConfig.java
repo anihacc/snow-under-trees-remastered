@@ -1,4 +1,4 @@
-package mine.block.snowundertrees;
+package mine.block.snowday;
 
 import java.util.List;
 
@@ -8,8 +8,8 @@ import me.shedaniel.autoconfig.annotation.Config;
 import com.google.common.collect.Lists;
 import me.shedaniel.cloth.clothconfig.shadowed.blue.endless.jankson.Comment;
 
-@Config(name = SnowUnderTrees.MODID)
-public class Configuration implements ConfigData
+@Config(name = SnowDay.MODID)
+public class SnowdayConfig implements ConfigData
 {
 	@Comment(value = "Set this to false to disable snow under trees when first generating chunks.")
 	public boolean enableBiomeFeature = true;
@@ -20,4 +20,7 @@ public class Configuration implements ConfigData
 	@Comment(value = "Add biome IDs here to exempt biomes from being affected by the mod (surrounded by \"\"). You can find the biome ID of the biome you're currently in on the F3 screen.\n" +
 			"For example, the biome ID of the plains biome looks like this: minecraft:plains")
 	public List<? extends String> filteredBiomes = Lists.newArrayList();
+
+	@Comment(value = "Set this to false to disable leaves turning white when it's snowing.")
+	public boolean whiteLeavesWhenSnowing = true;
 }

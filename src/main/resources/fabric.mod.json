@@ -1,32 +1,32 @@
 {
   "schemaVersion": 1,
-  "id": "snowundertrees",
+  "id": "snowday",
   "version": "${version}",
 
-  "name": "Snow Under Trees",
-  "description": "Adds snow under trees in snowy biomes.",
+  "name": "Snow Day",
+  "description": "Makes snowing more mystical and magical.",
   "authors": [
     "DeadlyMC",
     "bl4ckscor3",
     "mineblock11"
   ],
   "contact": {
-    "homepage": "https://www.curseforge.com/minecraft/mc-mods/snow-under-trees-fabric",
-    "sources": "https://github.com/DeadlyMC/snow-under-trees-fabric",
-    "issues": "https://github.com/DeadlyMC/snow-under-trees-fabric/issues"
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/snowday",
+    "sources": "https://github.com/11mods/snowday",
+    "issues": "https://github.com/11mods/snowday/issues"
   },
 
   "license": "MIT",
-  "icon": "assets/snowundertrees/icon.png",
+  "icon": "assets/snowday/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "mine.block.snowundertrees.SnowUnderTrees"
+      "mine.block.snowday.SnowDay"
     ]
   },
   "mixins": [
-    "snowundertrees.mixins.json"
+    "snowday.mixins.json"
   ],
 
   "depends": {

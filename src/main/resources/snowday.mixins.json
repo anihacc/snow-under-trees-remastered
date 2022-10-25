@@ -1,9 +1,11 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "mine.block.snowundertrees.mixins",
+  "package": "mine.block.snowday.mixins",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
+    "DefaultStateInvoker",
+    "LeavesBlockMixin",
     "ThreadedAnvilChunkStorageInvoker"
   ],
   "client": [

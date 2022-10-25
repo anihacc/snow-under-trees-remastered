@@ -1,4 +1,4 @@
-package mine.block.snowundertrees.mixins;
+package mine.block.snowday.mixins;
 
 import net.minecraft.server.world.ChunkHolder;
 import net.minecraft.server.world.ThreadedAnvilChunkStorage;

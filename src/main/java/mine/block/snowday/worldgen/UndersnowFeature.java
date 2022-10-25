@@ -1,4 +1,4 @@
-package mine.block.snowundertrees;
+package mine.block.snowday.worldgen;
 
 import com.mojang.serialization.Codec;
 
@@ -14,9 +14,9 @@ import net.minecraft.world.gen.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.util.FeatureContext;
 
-public class SnowUnderTreesFeature extends Feature<DefaultFeatureConfig>
+public class UndersnowFeature extends Feature<DefaultFeatureConfig>
 {
-	public SnowUnderTreesFeature(Codec<DefaultFeatureConfig> codec)
+	public UndersnowFeature(Codec<DefaultFeatureConfig> codec)
 	{
 		super(codec);
 	}
