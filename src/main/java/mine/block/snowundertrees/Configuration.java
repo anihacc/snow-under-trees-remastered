@@ -1,4 +1,4 @@
-package bl4ckscor3.mod.snowundertrees;
+package mine.block.snowundertrees;
 
 import java.util.List;
 

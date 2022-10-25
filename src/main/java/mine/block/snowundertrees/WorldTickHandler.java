@@ -1,8 +1,8 @@
-package bl4ckscor3.mod.snowundertrees;
+package mine.block.snowundertrees;
 
 import java.util.Optional;
 
-import bl4ckscor3.mod.snowundertrees.mixins.ThreadedAnvilChunkStorageInvoker;
+import mine.block.snowundertrees.mixins.ThreadedAnvilChunkStorageInvoker;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.LeavesBlock;
@@ -13,6 +13,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.world.Heightmap;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.WorldChunk;
@@ -33,7 +34,8 @@ public class WorldTickHandler
 					int chunkX = chunkPos.getStartX();
 					int chunkY = chunkPos.getStartZ();
 					BlockPos randomPos = world.getRandomPosInChunk(chunkX, 0, chunkY, 15);
-					Biome biome = world.getBiome(randomPos);
+					RegistryEntry<Biome> biomeKey = world.getBiome(randomPos);
+					Biome biome = biomeKey.value();
 					boolean biomeDisabled = SnowUnderTrees.CONFIG.filteredBiomes.contains(world.getRegistryManager().get(Registry.BIOME_KEY).getKey(biome).toString());
 
 					if (!biomeDisabled && world.getBlockState(world.getTopPosition(Heightmap.Type.MOTION_BLOCKING, randomPos).down()).getBlock() instanceof LeavesBlock)

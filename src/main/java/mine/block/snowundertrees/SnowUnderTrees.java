@@ -1,4 +1,4 @@
-package bl4ckscor3.mod.snowundertrees;
+package mine.block.snowundertrees;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,11 +21,9 @@ public class SnowUnderTrees implements ModInitializer
 {
 	public static final String MODID = "snowundertrees";
 	public static Configuration CONFIG;
-
 	private static final Feature<DefaultFeatureConfig> SNOW_UNDER_TREES_FEATURE = new SnowUnderTreesFeature(DefaultFeatureConfig.CODEC);
-	public static final ConfiguredFeature<?, ?> SNOW_UNDER_TREES_CONFIGURED = SNOW_UNDER_TREES_FEATURE.configure(FeatureConfig.DEFAULT);
-	public static final PlacedFeature SNOW_UNDER_TREES_PLACED = SNOW_UNDER_TREES_CONFIGURED.withPlacement();
-	private static List<Identifier> biomesToAddTo = new ArrayList<>();
+	public static final ConfiguredFeature<?, ?> SNOW_UNDER_TREES_CONFIGURED = new ConfiguredFeature<>(SNOW_UNDER_TREES_FEATURE, new DefaultFeatureConfig());
+	private static final List<Identifier> biomesToAddTo = new ArrayList<>();
 
 	public SnowUnderTrees()
 	{
@@ -42,7 +40,7 @@ public class SnowUnderTrees implements ModInitializer
 		Registry.register(Registry.FEATURE, new Identifier(MODID, "snow_under_trees"), SNOW_UNDER_TREES_FEATURE);
 		RegistryKey<ConfiguredFeature<?, ?>> snowUnderTrees = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier(MODID, "snow_under_trees"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, snowUnderTrees.getValue(), SNOW_UNDER_TREES_CONFIGURED);
-		Registry.register(BuiltinRegistries.PLACED_FEATURE, new Identifier(MODID, "snow_under_trees"), SNOW_UNDER_TREES_PLACED);
+		Registry.register(BuiltinRegistries.PLACED_FEATURE, new Identifier(MODID, "snow_under_trees"), new PlacedFeature(BuiltinRegistries.CONFIGURED_FEATURE.getEntry(snowUnderTrees).get(), new ArrayList<>()));
 		RegistryKey<PlacedFeature> placedFeatureKey = RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier(MODID, "snow_under_trees"));
 
 		ServerTickEvents.START_WORLD_TICK.register(WorldTickHandler::onWorldTick);
