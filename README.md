@@ -1,7 +1,5 @@
 # Snowy Trees
-A Minecraft mod that adds snow under trees in snowy biomes.
-
-A 1.19 continuation of Snow Under Trees Fabric.
+Snow Day is a fork of Snow Under Trees that updates the functionality to 1.19+, and adds the Bedrock Edition snowy leaves effect.
 
 Credits to the original creators.
 
