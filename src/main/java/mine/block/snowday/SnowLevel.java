@@ -24,6 +24,8 @@ public enum SnowLevel implements StringIdentifiable {
             return FoliageColors.getBirchColor();
         } else if (block == Blocks.SPRUCE_LEAVES) {
             return FoliageColors.getSpruceColor();
+        } else if (block == Blocks.MANGROVE_LEAVES) {
+            return FoliageColors.getMangroveColor();
         } else {
             return world != null ? BiomeColors.getFoliageColor(world, pos) : FoliageColors.getDefaultColor();
         }
@@ -62,7 +64,8 @@ public enum SnowLevel implements StringIdentifiable {
                 Blocks.OAK_LEAVES,
                 Blocks.DARK_OAK_LEAVES,
                 Blocks.FLOWERING_AZALEA_LEAVES,
-                Blocks.SPRUCE_LEAVES
+                Blocks.SPRUCE_LEAVES,
+                Blocks.MANGROVE_LEAVES
         );
     }
 
