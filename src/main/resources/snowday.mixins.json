@@ -4,8 +4,6 @@
   "package": "mine.block.snowday.mixins",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
-    "DefaultStateInvoker",
-    "LeavesBlockMixin",
     "ThreadedAnvilChunkStorageInvoker"
   ],
   "client": [

@@ -1,9 +1,8 @@
 {
   "schemaVersion": 1,
-  "id": "snowday",
+  "id": "snow-under-trees",
   "version": "${version}",
-
-  "name": "Snow Day",
+  "name": "Snow Under Trees Remaster",
   "description": "Makes snowing more mystical and magical.",
   "authors": [
     "DeadlyMC",
@@ -17,7 +16,7 @@
   },
 
   "license": "MIT",
-  "icon": "assets/snowday/icon.png",
+  "icon": "assets/snowundertrees/icon.png",
 
   "environment": "*",
   "entrypoints": {
