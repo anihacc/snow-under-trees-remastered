@@ -20,7 +20,4 @@ public class SnowdayConfig implements ConfigData
 	@Comment(value = "Add biome IDs here to exempt biomes from being affected by the mod (surrounded by \"\"). You can find the biome ID of the biome you're currently in on the F3 screen.\n" +
 			"For example, the biome ID of the plains biome looks like this: minecraft:plains")
 	public List<? extends String> filteredBiomes = Lists.newArrayList();
-
-	@Comment(value = "Set this to false to disable leaves turning white when it's snowing.")
-	public boolean whiteLeavesWhenSnowing = true;
 }

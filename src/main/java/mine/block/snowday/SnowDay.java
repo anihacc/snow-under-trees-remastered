@@ -22,7 +22,6 @@ public class SnowDay implements ModInitializer
 		SnowDay.CONFIG = AutoConfig.getConfigHolder(SnowdayConfig.class).getConfig();
 		ServerLifecycleEvents.SERVER_STARTING.register(server -> AutoConfig.getConfigHolder(SnowdayConfig.class).load());
 		SnowUnderTreeHelper.initialize();
-		SnowLevel.initialize();
 	}
 
 }
